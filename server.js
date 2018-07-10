@@ -1,29 +1,22 @@
 const express = require("express");
 const app = express();
+// database
 const Pokemon = require("./models/pokemon")
 
-app.get("/pokemon", (req, res) => {
-  res.render("index.ejs",{
-    pokemon: Pokemon
-  })
-})
 
-app.get("/pokemon", (req, res) => {
-  res.send(Pokemon)
+// index route
+app.get('/pokemon', (req, res) => {
+  res.render('index.ejs', {
+    pokemon: Pokemon
+  });
 });
 
-
-app.get("/pokemon/:id", (req, res) => {
-  res.send(req.params.id);
-})
-
-app.get("/pokemon/:id", (req, res) => {
-  res.render("show.ejs", {
-    pokemon: Pokemon[res.param.index]
-  })
-})
-
-
+// show route
+app.get('/pokemon/:id', (req, res) => {
+  res.render('show.ejs', {
+    pokemon: Pokemon[req.params.id]
+  });
+});
 
 
 

@@ -18,6 +18,7 @@
   "homepage": "https://github.com/StevieOh/wdi-12-hw11-pokemon-express#readme",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "static": "^2.0.0"
   }
 }
